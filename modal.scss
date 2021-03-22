@@ -1,0 +1,176 @@
+/* Imports */
+
+@import "./variables.scss";
+
+
+/* Règles transverses */
+/* coucou */
+* {
+  margin: 0;
+  border: 0;
+}
+h1 {
+  font-size: 36px;
+  color: $colour-primary;
+  font-weight: 400;
+  font-family: $font-principal;
+}
+h2 {
+  font-size: 36px;
+  color: $colour-secondary;
+  font-weight: 400;
+  font-family: $font-principal;
+}
+p {
+  font-size: 14px;
+  font-family: $font-principal;
+}
+
+a {
+  font-size: 12px;
+  color: $colour-primary;
+  font-weight: 500;
+  font-family: $font-principal;
+  text-decoration: none;
+  cursor: default;
+}
+
+.tag {
+  height: 15px;
+  margin: 5px 2px 5px 2px;
+  padding: 3px 8px;
+  border: solid $colour-medium-grey 1px;
+  border-radius: 10px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $colour-primary;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.vignette-tag {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* body-header */
+
+.header {
+  display: flex;
+  float: left;
+  width: 75%;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .header-logo {
+    display: flex;
+    width: 200px;
+    margin: 43px 50px 60px 100px;
+    cursor: pointer;
+
+    @media screen and (max-width: 1000px) {
+      width: 150px;
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .main-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 43px;
+    justify-content: center;
+    max-height: 80px;
+
+    @media screen and (max-width: 1000px) {
+      width: 160%;
+      height: 80px;
+      margin: 0 40px 40px 40px;
+    }
+  }
+}
+
+/* body-main */
+
+main {
+  .titre {
+    display: flex;
+    float: right;
+    width: 25%;
+    margin-top: 43px;
+
+    @media screen and (max-width: 1000px) {
+      font-size: 13px;
+      width: 40%;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 30px;
+      height: 30px;
+    }
+  }
+  .mosaique-vignette {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(100px, auto);
+    width: 100%;
+
+    @media screen and (max-width: 1000px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+      .vignette {
+      display: flex;
+      flex-direction: column;
+      margin: 0 50px 30px 50px;
+      text-align: center;
+      align-items: center;
+
+      @media screen and (max-width: 1000px) {
+        margin: 0 10px 30px 10px;
+      }
+
+      .vignette-photo {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0px 0px 8px $colour-medium-grey;
+      }
+      .vignette-description {
+        .vignette-description-ville {
+          font-size: 13px;
+          color: $colour-primary;
+          font-weight: 400;
+          font-family: $font-principal;
+          line-height: 20px;
+        }
+
+        .vignette-description-slogan {
+          font-size: 10px;
+          color: black;
+          font-weight: 400;
+          font-family: $font-principal;
+          line-height: 20px;
+        }
+
+        .vignette-description-tarif {
+          font-size: 9px;
+          color: $text-tertiary;
+          font-weight: 400;
+          font-family: $font-principal;
+          line-height: 20px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* Imports scss */
+@import "./photographer.scss";
