@@ -1,9 +1,5 @@
 @import "./variables.scss";
 
-main {
-  width: 90%;
-  margin: 0 5% 0 5%;
-}
 #header {
   width: 100%;
   margin-left: 0;
@@ -11,6 +7,9 @@ main {
 }
 
 main {
+  width: 90%;
+  margin: 0 5% 0 5%;
+
   #page-photographer {
     display: flex;
     float: left;
@@ -26,6 +25,7 @@ main {
 
     @media screen and (max-width: 800px) {
       height: 260px;
+      background-color: #fff;
     }
 
     #vignette {
@@ -37,7 +37,7 @@ main {
       @media screen and (max-width: 800px) {
         width: 65%;
         padding-left: 20px;
-
+        background-color: #fff;
       }
 
       h2 {
@@ -70,6 +70,7 @@ main {
         justify-content: left;
         @media screen and (max-width: 800px) {
           font-size: 13px;
+          flex-wrap: nowrap;
         }
       }
     }
@@ -127,14 +128,31 @@ main {
       align-content: space-between;
       grid-template-columns: 350px 350px 350px;
 
+      @media screen and (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
       .vignette {
         margin: 0;
         align-items: start;
+
+        @media screen and (max-width: 1200px) {
+          align-items: center;
+        }
 
         img {
           width: 350px;
           height: 300px;
           object-fit: cover;
+          border-radius: 5px;
+
+          @media screen and (max-width: 900px) {
+            width: 335px;
+            height: 190px;
+          }
         }
 
         .vignette-desc {
@@ -143,6 +161,14 @@ main {
           height: 50px;
           align-items: center;
 
+          @media screen and (max-width: 1200px) {
+            width: 350px;
+          }
+
+          @media screen and (max-width: 1200px) {
+            width: 335px;
+          }
+
           p {
             display: flex;
             font-size: 24px;
@@ -150,6 +176,9 @@ main {
             font-weight: 400;
             font-family: $font-principal;
             line-height: 20px;
+            @media screen and (max-width: 900px) {
+              font-size: 14px;
+            }
           }
           .titre-vignette {
             width: 50%;
@@ -169,6 +198,56 @@ main {
           }
         }
       }
+    }
+  }
+
+  .encart-CTA-responsive {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 35px;
+    width: 170px;
+    background-color: $colour-primary;
+    font-family: $font-principal;
+    font-weight: 700;
+    color: #fff;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media screen and (max-width: 1000px) {
+      display: flex;
+    }
+  }
+
+  .infos-globales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 0 0;
+    height: 40px;
+    width: 230px;
+    background-color: #db8876;
+    font-family: $font-principal;
+    font-weight: 500;
+    color: black;
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+
+    p {
+      width: 40%;
+    }
+
+    .tarif {
+      justify-content: flex-end;
+      display: flex;
     }
   }
 }

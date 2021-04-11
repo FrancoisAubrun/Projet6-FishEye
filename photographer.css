@@ -1,12 +1,12 @@
-main {
-  width: 90%;
-  margin: 0 5% 0 5%;
-}
-
 #header {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
+}
+
+main {
+  width: 90%;
+  margin: 0 5% 0 5%;
 }
 
 main #page-photographer {
@@ -32,6 +32,7 @@ main #page-photographer {
 @media screen and (max-width: 800px) {
   main #page-photographer {
     height: 260px;
+    background-color: #fff;
   }
 }
 
@@ -46,6 +47,7 @@ main #page-photographer #vignette {
   main #page-photographer #vignette {
     width: 65%;
     padding-left: 20px;
+    background-color: #fff;
   }
 }
 
@@ -94,6 +96,8 @@ main #page-photographer #vignette .vignette-tag {
 @media screen and (max-width: 800px) {
   main #page-photographer #vignette .vignette-tag {
     font-size: 13px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -170,6 +174,20 @@ main .presentation-photo .mosaique-vignette {
       grid-template-columns: 350px 350px 350px;
 }
 
+@media screen and (max-width: 1200px) {
+  main .presentation-photo .mosaique-vignette {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main .presentation-photo .mosaique-vignette {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 main .presentation-photo .mosaique-vignette .vignette {
   margin: 0;
   -webkit-box-align: start;
@@ -177,11 +195,27 @@ main .presentation-photo .mosaique-vignette .vignette {
           align-items: start;
 }
 
+@media screen and (max-width: 1200px) {
+  main .presentation-photo .mosaique-vignette .vignette {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 main .presentation-photo .mosaique-vignette .vignette img {
   width: 350px;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  main .presentation-photo .mosaique-vignette .vignette img {
+    width: 335px;
+    height: 190px;
+  }
 }
 
 main .presentation-photo .mosaique-vignette .vignette .vignette-desc {
@@ -195,6 +229,18 @@ main .presentation-photo .mosaique-vignette .vignette .vignette-desc {
           align-items: center;
 }
 
+@media screen and (max-width: 1200px) {
+  main .presentation-photo .mosaique-vignette .vignette .vignette-desc {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  main .presentation-photo .mosaique-vignette .vignette .vignette-desc {
+    width: 335px;
+  }
+}
+
 main .presentation-photo .mosaique-vignette .vignette .vignette-desc p {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,6 +250,12 @@ main .presentation-photo .mosaique-vignette .vignette .vignette-desc p {
   font-weight: 400;
   font-family: "DM sans", sans-serif;
   line-height: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  main .presentation-photo .mosaique-vignette .vignette .vignette-desc p {
+    font-size: 14px;
+  }
 }
 
 main .presentation-photo .mosaique-vignette .vignette .vignette-desc .titre-vignette {
@@ -227,5 +279,76 @@ main .presentation-photo .mosaique-vignette .vignette .vignette-desc .fa-heart {
   display: -ms-flexbox;
   display: flex;
   color: #901C1C;
+}
+
+main .encart-CTA-responsive {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  height: 35px;
+  width: 170px;
+  background-color: #901C1C;
+  font-family: "DM sans", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1000px) {
+  main .encart-CTA-responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+main .infos-globales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px 5px 0 0;
+  height: 40px;
+  width: 230px;
+  background-color: #db8876;
+  font-family: "DM sans", sans-serif;
+  font-weight: 500;
+  color: black;
+  position: fixed;
+  bottom: 0px;
+  right: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+  main .infos-globales {
+    display: none;
+  }
+}
+
+main .infos-globales p {
+  width: 40%;
+}
+
+main .infos-globales .tarif {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=photographer.css.map */
