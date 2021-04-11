@@ -1,22 +1,231 @@
-main .mosaique-vignette .encart-photographe {
-  background-color: black;
+main {
+  width: 90%;
+  margin: 0 5% 0 5%;
+}
+
+#header {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+main #page-photographer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 50px 0 50px 0;
+  text-align: center;
+  background-color: #FAFAFA;
   width: 100%;
   height: 313px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-main .mosaique-vignette .encart-photographe h2 {
-  font-size: 83px;
+@media screen and (max-width: 800px) {
+  main #page-photographer {
+    height: 260px;
+  }
 }
 
-main .mosaique-vignette .encart-photographe .vignette-description .vignette-description-ville {
-  font-size: 36px;
+main #page-photographer #vignette {
+  background-color: #FAFAFA;
+  width: 40%;
+  text-align: left;
+  padding-left: 50px;
 }
 
-main .mosaique-vignette .encart-photographe .vignette-description .vignette-description-slogan {
-  font-size: 50px;
+@media screen and (max-width: 800px) {
+  main #page-photographer #vignette {
+    width: 65%;
+    padding-left: 20px;
+  }
 }
 
-main .mosaique-vignette .encart-photographe .vignette-photo {
-  width: 50px;
+main #page-photographer #vignette h2 {
+  font-size: 64px;
+}
+
+@media screen and (max-width: 800px) {
+  main #page-photographer #vignette h2 {
+    font-size: 36px;
+  }
+}
+
+main #page-photographer #vignette .vignette-description-ville {
+  font-size: 24px;
+  color: #901C1C;
+  line-height: 31px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  main #page-photographer #vignette .vignette-description-ville {
+    font-size: 13px;
+  }
+}
+
+main #page-photographer #vignette .vignette-description-slogan {
+  font-size: 18px;
+  color: #525252;
+  line-height: 23px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  main #page-photographer #vignette .vignette-description-slogan {
+    font-size: 13px;
+  }
+}
+
+main #page-photographer #vignette .vignette-tag {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+@media screen and (max-width: 800px) {
+  main #page-photographer #vignette .vignette-tag {
+    font-size: 13px;
+  }
+}
+
+main #page-photographer .encart-CTA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  height: 69px;
+  width: 170px;
+  background-color: #901C1C;
+  font-family: "DM sans", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  main #page-photographer .encart-CTA {
+    display: none;
+  }
+}
+
+main #page-photographer .vignette-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 8px #b8b8b8;
+          box-shadow: 0px 0px 8px #b8b8b8;
+  position: absolute;
+  right: 50px;
+  top: 25%;
+}
+
+@media screen and (max-width: 800px) {
+  main #page-photographer .vignette-photo {
+    width: 120px;
+    height: 120px;
+    right: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main #page-photographer .vignette-photo {
+    width: 100px;
+    height: 100px;
+    right: 10px;
+  }
+}
+
+main .presentation-photo .tri {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 10;
+}
+
+main .presentation-photo .mosaique-vignette {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-grid-columns: 350px 350px 350px;
+      grid-template-columns: 350px 350px 350px;
+}
+
+main .presentation-photo .mosaique-vignette .vignette {
+  margin: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+main .presentation-photo .mosaique-vignette .vignette img {
+  width: 350px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .presentation-photo .mosaique-vignette .vignette .vignette-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .presentation-photo .mosaique-vignette .vignette .vignette-desc p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 24px;
+  color: #901C1C;
+  font-weight: 400;
+  font-family: "DM sans", sans-serif;
+  line-height: 20px;
+}
+
+main .presentation-photo .mosaique-vignette .vignette .vignette-desc .titre-vignette {
+  width: 50%;
+}
+
+main .presentation-photo .mosaique-vignette .vignette .vignette-desc .tarif {
+  width: 26%;
+}
+
+main .presentation-photo .mosaique-vignette .vignette .vignette-desc .like,
+main .presentation-photo .mosaique-vignette .vignette .vignette-desc .fa-heart {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 12%;
+}
+
+main .presentation-photo .mosaique-vignette .vignette .vignette-desc .fa-heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #901C1C;
 }
 /*# sourceMappingURL=photographer.css.map */
